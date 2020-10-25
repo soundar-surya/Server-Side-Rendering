@@ -1,1 +1,1 @@
-web:node build/bundle.js
+web:node node build/bundle.js
