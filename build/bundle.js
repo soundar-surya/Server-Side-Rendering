@@ -84,6 +84,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 var FETCH_USERS = exports.FETCH_USERS = 'fetch_users';
 var FETCH_CURRENT_USER = exports.FETCH_CURRENT_USER = 'fetch_current_user';
+var FETCH_ADMINS = exports.FETCH_ADMINS = 'fetch_admins';
 
 var fetchUser = exports.fetchUser = function fetchUser() {
     return function () {
@@ -144,6 +145,8 @@ var fetchCurrentUser = exports.fetchCurrentUser = function fetchCurrentUser() {
         };
     }();
 };
+
+//export const fetchAdmins = () => async ()
 
 /***/ }),
 /* 2 */
@@ -280,7 +283,8 @@ app.get('*', function (req, res) {
     });
 });
 
-app.listen(3000 || process.env.PORT);
+var PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0');
 
 /***/ }),
 /* 8 */
