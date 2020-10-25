@@ -1,1 +1,1 @@
-web:node src/index.js
+web:node node build/bundle.js
