@@ -14,7 +14,6 @@ export default () => {
         <a href="/api/auth/google" className="black-text">Login</a>
     );
 
-    console.log(`auth stat: `, state);
     return(
         <nav>
             <div className="nav-wrapper blue lighten-5">

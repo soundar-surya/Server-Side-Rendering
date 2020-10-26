@@ -5,7 +5,7 @@ import { Redirect  } from 'react-router-dom';
 export default ChildComponent => {
 
     class RequireAuth extends Component {
-
+        
         render(){
             switch(this.props.auth){
                 case false:
@@ -20,9 +20,11 @@ export default ChildComponent => {
                     return <ChildComponent {...this.props}/>
         }
         }
-    };
+    }
 
-    const mapStateToProps = ( { auth } ) => ( { auth } ); 
+    function mapStateToProps({auth}){
+        return{ auth };
+    }; 
 
     return connect(mapStateToProps)(RequireAuth);
 };

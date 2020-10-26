@@ -3,6 +3,8 @@ import App from './App';
 import HomePage from './pages/HomePage';
 import UsersListPage from './pages/usersListPage';
 import NotFoundPage from './pages/NotFoundPage';
+import adminsListPage from './pages/adminsListPage';
+
 
 export default [
     {
@@ -12,6 +14,10 @@ export default [
                 ...HomePage,
                 path: '/',
                 exact: true
+            },
+            {
+                ...adminsListPage,
+                path:"/admins"
             },
             {
                 ...UsersListPage,
